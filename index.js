@@ -1,8 +1,16 @@
-require("http").createServer((req, res) => res.end("Thx For sing Me Credits ZeroSync")).listen(process.env.PORT || 8000)
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const config = require("./config.json");
+const chalk = require('chalk');
+//dont remove or edit this line
+console.log(chalk.red('=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+='))
+  console.log(chalk.cyan(`Made by Tomato6966`))
+  console.log(chalk`{yellowBright Discord } | {blueBright NarutoCodm} | {cyanBright https://discord.gg/KtdvhUeWRB}`)
+  console.log(chalk`{yellowBright Discord } | {blueBright Join here >} | {cyanBright https://discord.gg/KtdvhUeWRB}`)
+  console.log(`Join Above for Support!`)
+  console.log(chalk.red('=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+='))
+  //til here dont touch above anything
 client.config = config;
 
 const { GiveawaysManager } = require("discord-giveaways");
@@ -53,7 +61,7 @@ client.giveawaysManager.on(
           .setDescription(
             `Your entery to [This Giveaway](https://discord.com/channels/${giveaway.guildID}/${giveaway.channelID}/${giveaway.messageID}) has been approved!`
           )
-          .setFooter("Wumpus op!")
+          .setFooter("Coded By NarutoCodm")
           .setTimestamp()
       );
     } catch (error) {
@@ -65,7 +73,7 @@ client.giveawaysManager.on(
           .setDescription(
             `Your entery to [This Giveaway](https://discord.com/channels/${giveaway.guildID}/${giveaway.channelID}/${giveaway.messageID}) has been denied as you did not join **${guildx.name}**`
           )
-         .setFooter("Wumpus op!")
+         .setFooter("Coded By NarutoCodm")
       );
     }
   }
@@ -112,3 +120,4 @@ client.giveawaysManager.on('giveawayReactionRemoved', (giveaway, member, reactio
 
 // Login through the client
 client.login(config.token);
+
