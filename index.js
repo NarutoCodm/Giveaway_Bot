@@ -1,3 +1,4 @@
+require("http").createServer((req, res) => res.end("Credits NArutoCodm And ZeroSync")).listen(process.env.PORT || 8000)
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
